@@ -1,0 +1,12 @@
+---
+:id: 139381870
+:submitters:
+- :name: LANE ZAUGG
+  :email: u1375540@utah.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2022-10-08 01:15:00.984349000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2022-10-07 18:15:00.984349000 Z
+:status: processed
+:score: 10.0
