@@ -10,3 +10,8 @@ Here is a demo of how the interactions look. You can also check out a higher res
 Here is the final GeoJSON visualization, and a higher resolution [video](figs/video.mov)
 
 ![Animated Result](figs/example.gif)
+
+## Senate Predictions
+The final solution behaves something like this ([full resolution download](figs/demo.mp4)):
+
+![demo](figs/demo.gif)
