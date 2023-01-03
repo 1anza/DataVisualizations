@@ -1,64 +1,5 @@
-# CS-5630 / CS-6630 Homework 5
-*Due: Friday, October 7, 11:59 pm.*
-
-In this assignment you will visualize polling data and predictions for the upcoming US senate election. The goal of the homework is to visualize the predicted margin of victory for the candidates in each state, but to also show the uncertainty in the race as of late September. Finally, we also want to show the “raw” data underlying these predictions – the polling data.
-
-We've retrieved the data from [FiveThirtyEight's website](https://fivethirtyeight.com/). Also take a look at how [FiveThirtyEight visualizes their 2022 forecast](https://projects.fivethirtyeight.com/2022-election-forecast/). And finally, our design is inspired by they way [visualize the senate race](https://projects.fivethirtyeight.com/2022-election-forecast/senate/).
-
-Your final visualization should look roughly as follows: 
-
-![Overview](figs/overview.png)
-
-Note that this design isn't perfect – we're simplifying a lot here. For example, we'd probably want to also show the date at which a poll was taken in a “production” visualization, how reliable to poll is, and we'd probably also want to show how important each state if for the electoral college. We also might want to add a visualization for the overall win probabilities. Finally, we're making the simplyfing assumption that for every state, there's a Democrat and a Republican. That's **not true in Utah**, where one of the two likely winners is an independent. We'll still count independents as belonging to “the other party”. We're not doing that here to keep the homework simple. 
-
-
-## Learning Goals
-
-The learning goals for this homework are the following: 
-
- * Creating custom visualizations with several components (dots and rectangles for predicted margin of victory).
- * Selecting elements based on their data fields and not on their class or id.
- * Reinforce the logical association of data to elements and how they are passed down from parent to child element.  
- * Deriving a dataset, i.e., making a data transformation, by aggregating using `d3.rollup()` (extra credit only). 
- 
-## Implementation
-
-We have provided boilerplate code that you should use to develop your solution. Note that you're free to diverge from our suggested solution, as long as you (a) stick with D3 and (b) can justify your choices.
-
-As in previous homeworks, add your name, your e-mail address, and your UID to the HTML elements at the top. Also make sure your submission generates valid HTML5. Check that it is valid by uploading the DOM content to the [W3C HTML Validator](https://validator.w3.org/) or use a browser extension such as [Validity](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif?hl=en-GB).
-
-Other than adding your name, etc., you should not need to edit the html file in this assignment (though you are free to optimize positioning, etc.)
-
-Your project structure looks like this:
-
-    hw5/
-        hw5.html
-        styles.css
-        assets/
-        data/
-        	senate_forecasts.csv # Model predictions for different states.
-        	senate_polls.json # Different state polls.
-        	senate_polls.csv # The original data for polls.json. This is only used if you attempt the extra credit.
-        figs/
-        	# figures / videos used in the README
-        	# irrelevant for the project
-        js/
-            script.js # initialization, you only need to change this if you attempt the extra credit.
-            table.js # the table implementation
-       
-        	   
-Remember, to be able to access the data files with javascript, you will need to be *serving* the homework directory, not just opening the HTML file in a browser:
-```sh
-cd hw5
-# for python 2
-python -m SimpleHTTPServer
-# for python 3
-python -m http.server
-```
-Now, you can view the page at [http://localhost:8080](http://localhost:8080).
-
-## Wrangling the Data (extra credit)
-
+# Senate Predictions
+## Wrangling the Data
 We provide code that loads the data for you from `senate_polls.json` and `senate_forecasts.csv`. `senate_forecasts.csv` has many different data fields, we will only use a few of them.
 
 The relevant columns in `senate_forecasts.csv` are : 
@@ -173,32 +114,8 @@ In the following example you can see both Utah and Washington expanded.
 
 ![expandedExample](figs/overview.png)
 
-
-**Note 1:** There are some states that do not have any polling data in the dataset. For the purpose of this assignment, nothing should happens when you click these states.
-
-**Note 2:** To keep the sorting simple, for a basic implementation you should just call `this.collapseAll` before sorting the table, i.e., when you sort, all individual polls are hidden.
-
-## Extra credit
-As mentioned in **Note 2**, the basic implementation will collapse the groups before sorting. To receive extra credit you should not automatically collapse these groups, and instead:
-* Keep the state polls grouped under their state.
-* Sort the the polls within its group.
-
-
 ## DONE! 
 
 Your final solution should behave something like this ([full resolution download](figs/demo.mp4)):
 
 ![demo](figs/demo.gif)
-
-## Grading
-
-* 5%: Extra Credit 1 (Data Loading): Data is loaded from the CSV file. JSON file isn't used.
-* 5%: Part I: Table Text Elements.
-* 5%: Part II: Plot Legend.
-* 15%: Part III: Gridlines.
-* 15%: Part IV: Bar charts.
-* 15%: Part V: Circle plots.
-* 15%: Part VI: Sorting table elements.
-* 10%: Part VII: Showing sort state in headers.
-* 20%: Part VII: Table subgroups.
-* 5%: Extra Credit 2: Sorting works with groups open.
