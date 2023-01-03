@@ -1,49 +1,4 @@
-# CS-5630 / CS-6630 Homework 4
-*Due: Friday, Sep 30, 11:59 pm.*
-
-In this assignment you will build a visualization inspired by [OurWorldInData's](https://ourworldindata.org/covid-cases) COVID-19 dashboard. The visualization we will make is made up of two views: a map and a line chart.
-
-The **map** provides geospatial context. Countries are color-coded with cumulative cases per million residents and can be selected to update the line chart with a detailed view of that country.
-
-The **line chart** has a couple of different states. The first is when there is no selected country. In this state, the chart shows the total cases for each continent over time. The second state is when we select a country (or countries) in the map view. When we do this, the visualization should change to show the case trends of just the selected countries.
-
-When a country is selected in the map, the country is highlighted on the map and the line chart will show that country for detailed inspection. The final visualization should look similar to the figure below:
-
-![Overview](figs/overview.png)
-
-## Learning Goals
-
-The learning goals for this homework are the following: 
-
- * Working with scales. 
- * Working with maps.
- * Dynamically updating charts.
- * Developing a visualization with multiple views that synchronizes selections.
-  
-## Project Structure
-
-We have provided boilerplate code for you in `hw4.html` for the main structure of the layout and css styling in `styles.css`. You will be working within the `.js` files that we have provided for the map and line chart views. 
-
-As in the previous homeworks, add your Name, UID, and email address at the top of the homework.
-
-The project file structure looks like this:
-
-    hw4.html
-    readme.md
-    styles.css
-    data/
-        grouped.json
-        owid-covid.csv
-        world.json
-    js/
-        line-chart.js
-        map.js        
-        script.js
-
-Remember that you will need to be *serving* the homework directory, not just opening the HTML file in a browser. 
-
-Before you submit you homework, you will want to make sure your submission is a valid html5 file. You can validate Check that it is valid by uploading it to the [W3C HTML Validator](https://validator.w3.org/#validate_by_upload).
-
+# World Case Tracker
 ## The Data
 
 Your map will use GeoJSON data that is contained in the `world.json` file. For this assignment, we provide only one CSV data file that contains all the information that you'll need. The file `owid-covid.csv` contains COVID-19 data from the start of the pandemic until September 7th, 2022; take a look at the file to understand the structure. We've provided the data loading for you, and the data is passed to the corresponding view objects in `script.js`. 
@@ -153,9 +108,3 @@ Note that if you skipped past this interaction step in the map creation steps ab
 Here is the final visualization, and a higher resolution [video](figs/video.mov)
 
 ![Animated Result](figs/example.gif)
-## Grading
-
-30% Map view implementation – map is drawn, countries are colored by `total_cases_per_million`, graticule is drawn  
-20% Data grouping for the line chart  
-30% Line chart implementation – line chart is drawn with continents as default, updates when the map is clicked, has interaction to show values at mouse location  
-20% Interactions, selections on update line chart, and "Clear Selected Countries" remove selections on both the map and the line chart. 
