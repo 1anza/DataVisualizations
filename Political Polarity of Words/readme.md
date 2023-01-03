@@ -1,9 +1,6 @@
-# CS-5630 / CS-6630 Homework 6
-*Due: Friday, November 4, 11:59 pm.*
+# Political Polarity of Words
 
-In this assignment, you will build an interactive visualization to explore the political polarity of words used in US governors' state of the state addresses. The visualization is inspired by the NY Times visualization of [corporate tax rates](https://archive.nytimes.com/www.nytimes.com/interactive/2013/05/25/sunday-review/corporate-taxes.html) we discussed in lecture.
-
-We've retrieved the data from [538's public data repositories](https://github.com/fivethirtyeight/data/blob/master/state-of-the-state/words.csv).
+Retrieved the data from [538's public data repositories](https://github.com/fivethirtyeight/data/blob/master/state-of-the-state/words.csv).
 
 ## Visualization Design
 
@@ -89,18 +86,7 @@ For the example, we highlighted the most extreme terms for both political partie
  
 ![highlight](figs/highlight.png)
 
-#### Summary of the things you need for storytelling:
-* Highlight something about the data that you find interesting.
-* The user should be able to show the panel with the highlight and then remove the panel in a controlled way.
-
-
-## Grading
-
-* 10%: Part I (HACKER VERSION EXTRA CREDIT): Data is loaded from the CSV file. JSON file isn't used.   
-* 35%: Part II: Bubblechart.  
-* 35%: Part III: Table.   
-* 20%: Part IV: Brush.
-* 10%: Part V: Storytelling.     
+ 
 
 
 
