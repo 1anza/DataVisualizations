@@ -15,3 +15,8 @@ Here is the final GeoJSON visualization, and a higher resolution [video](figs/vi
 The final solution behaves something like this ([full resolution download](figs/demo.mp4)):
 
 ![demo](figs/demo.gif)
+
+## Polarization of Words
+How the project looks
+
+![Overview](figs/overview.gif)
