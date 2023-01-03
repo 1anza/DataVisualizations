@@ -1,35 +1,4 @@
-# CS-5630 / CS-6630 Homework 3
-
-_Due: Friday, September 16, 11:59 pm._
-
-In this assignment, you will make interactive charts with JavaScript and D3 to explore Covid-19 data.
-
-## Implementation
-
-We have provided boilerplate code in [hw3.html](hw3.html) and in [script.js](script.js).
-
-As in previous homeworks, add your name, your e-mail address, and your uID to the HTML elements at the top.
-
-The project structure should look like this:
-
-    hw3/
-        hw3.html
-        README.md
-        script.js
-        data/
-            covid_us.csv
-            covid_utah.csv
-            covid_ca.csv
-            covid_ny.csv
-        figures/
-
-Remember, to be able to access the data files with JavaScript, we will need to be *serving* the homework directory, not just opening the HTML file in a browser. If your development environment doesn't provide a built-in server, start one with one of these commands:
-
-    $ cd path/to/hw3
-    # for python 3
-    $ python -m http.server 8080
-
-View the page at [http://localhost:8080](http://localhost:8080)
+# CovidDataCharts
 
 ## Part I: Basic Events and Setup
 
@@ -82,37 +51,9 @@ Your final result should look somewhat like this:
 
 ![Bar chart](figures/screenshot.png)
 
-## Extra Credit 1: More Events
-
-We focus on interactivity in this class; you will usually implement interactivity with JavaScript. 
-We suggest using D3 events for these. 
-
-First, make rectangles in bar chart and points in scatter plot change color when the mouse hovers over it **using JavaScript**, not CSS hover styling. One way to do this is to make a `.hovered` class that uses a different fill. Assign elements to have the class when the mouse is on the element, and remove the class when the mouse leaves.
-
-Your second interactive component will be to add an onClick listener to circles. When clicked, the browser should console log the x and y coordinates of that point to the console. 
-
-
-
-## Extra Credit 2: Transitions
-
-For extra credit, animate each D3 transition (gradually change sizes, positions, and shapes when switching datasets, and fade new and old items with opacity). As we will learn later in the course, animation is _very_ attention-grabbing; make sure your animations are tasteful and subtle. 
-
-
 ## Demo
 
 Here is a demo of how the interactions could look like. You can also check out a higher resolution version [here](figures/hw3_demo.mov).
 
 ![Animated Result](figures/hw3_demo.gif)
 
-
-## Grading
-
-Your score on this assignment will be as follows:
-
-5%: The menus trigger the appropriate functions.  
-4 * 15%: Each chart is rendered properly on page load (15% for each chart)  
-15% The charts, including the axis update based on data change.  
-10%: Elements are removed when "Random Subset" loads a smaller dataset.  
-10%: Elements are created and styled appropriately when "Random Subset" loads a larger dataset.  
-5%: Extra Credit 1: Elements change styles on hover and console log the data points on click.  
-5%: Extra Credit 2: All D3 transitions are animated **tastefully**.
